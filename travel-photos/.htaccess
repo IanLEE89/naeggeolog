@@ -1,0 +1,5 @@
+# 사진 폴더에서는 스크립트 실행 금지(업로드 악용 방지) + 목록 노출 금지
+Options -Indexes
+<FilesMatch "\.(php|phtml|phar|pl|py|cgi)$">
+  Require all denied
+</FilesMatch>

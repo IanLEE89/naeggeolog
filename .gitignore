@@ -1,0 +1,24 @@
+# ── 사용자 데이터 · 비밀 파일 (절대 커밋하지 마세요) ──
+/config.local.php
+/private/*
+!/private/.htaccess
+!/private/backups/
+/private/backups/*
+!/private/backups/.htaccess
+/data/
+/admin/data/
+
+# ── 사진 · 캐시 ──
+/travel-photos/*
+!/travel-photos/.htaccess
+/cache/*
+!/cache/.htaccess
+
+# ── 개발 도구 ──
+/_dev/node_modules/
+/_dev/package-lock.json
+
+# ── OS 부산물 ──
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,2 @@
+# 비밀 파일 폴더 — 웹에서 직접 접근 금지 (Apache 2.4)
+Require all denied

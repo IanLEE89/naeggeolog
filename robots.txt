@@ -1,0 +1,7 @@
+# 서버에서 mod_rewrite 가 켜져 있으면 이 파일 대신 robots.php 가 응답합니다(사이트맵 주소 포함).
+User-agent: *
+Disallow: /admin/
+Disallow: /hub/
+Disallow: /data/
+Disallow: /private/
+Allow: /

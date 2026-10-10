@@ -1,0 +1,8 @@
+# 내 공간 — 목록 노출 금지, 내부용 파일(_*.php, module.php, README) 직접 접근 차단, 검색엔진 색인 금지
+Options -Indexes
+<FilesMatch "^(_.*\.php|module\.php|README.*)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow"
+</IfModule>

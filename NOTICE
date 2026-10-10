@@ -1,0 +1,20 @@
+Naeggeolog
+Copyright 2026 IanLEE89
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product bundles the following third-party software, each under its own license:
+
+- TipTap / ProseMirror (MIT) — bundled in admin/vendor/naeggeolog-editor.js
+- PhotoSwipe (MIT) — bundled in assets/gallery.js
+- @googlemaps/markerclusterer (Apache-2.0) — assets/vendor/markerclusterer.js
+- qrcode-generator by Kazuhiko Arase (MIT) — admin/vendor/qrcode.js
+- exifr 7.1.3 lite by Mike Kovarik (MIT) — admin/vendor/exifr-lite.js
+- heic-to 1.6.5 (LGPL-3.0, includes libheif) — admin/vendor/heic-to.js
+  Distributed unmodified as a separate file. License texts: admin/vendor/LICENSE-LGPL-3.0.txt,
+  admin/vendor/LICENSE-GPL-3.0.txt. Source: https://github.com/hoppergee/heic-to
+
+The Naeggeolog name and logo (assets/logo.svg, assets/logo-dark.svg, assets/favicon.svg and the
+icon images in assets/ and favicon.ico) identify this project. The Apache License does not grant
+permission to use them as your own trademark (Section 6); replace them when you publish a modified
+version under a different name.

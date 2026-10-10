@@ -1,0 +1,5 @@
+# 썸네일(cache/thumbs)은 정적 파일로 직접 제공. 그 외 스크립트 실행·목록 노출은 차단.
+Options -Indexes
+<FilesMatch "\.(php|phtml|phar|pl|py|cgi)$">
+  Require all denied
+</FilesMatch>

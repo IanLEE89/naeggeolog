@@ -1,0 +1,45 @@
+# Naeggeolog — 기본 보호 설정 (Apache 2.4 / Web Station "Apache HTTP Server" 프로필)
+Options -Indexes
+
+# git 으로 내려받아 설치한 경우 저장소 정보(.git) 노출 차단
+RedirectMatch 404 /\.git(/|$)
+
+# 데이터·설정 파일 직접 열람 차단
+<FilesMatch "(^config\.local\.php$|\.(json|log|bak|tmp|sample|sqlite|sqlite-wal|sqlite-shm|db|zip|md|lock)$|^\.gitignore$)">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# 썸네일·사진은 파일명이 바뀌지 않으므로 오래 캐시 (재방문 시 NAS 로 요청이 거의 가지 않음)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType text/css   "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "^(sw\.js|offline\.html)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpe?g|png)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# 깔끔한 주소: /sitemap.xml · /robots.txt · /feed.xml  (mod_rewrite 가 꺼져 있으면 sitemap.php · robots.php · feed.php 를 직접 사용)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^sitemap\.xml$ sitemap.php [L]
+  RewriteRule ^robots\.txt$ robots.php [L]
+  RewriteRule ^feed\.xml$ feed.php [L]
+</IfModule>
