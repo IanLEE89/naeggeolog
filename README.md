@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-# Naeggeolog — 설치형 여행 블로그
+# Naeggeolog — 나만의 설치형 여행 블로그, '내꺼로그'
 
 사진과 장소 중심으로 여행을 기록하는 **PHP + SQLite 여행 블로그**입니다.
 데이터베이스 서버 없이 웹 호스팅·NAS(Synology 등)·개인 PC(Laragon/XAMPP)에 폴더째 올리면 바로 동작하고,
