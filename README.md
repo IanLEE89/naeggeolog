@@ -60,6 +60,30 @@
 
 여러 장의 사진을 한 번에 올리면 촬영 시각·위치(EXIF)를 읽어 소제목을 자동으로 나눠 주고(아이폰 HEIC 도 지원), 작성 중인 글은 자동 저장됩니다.
 
+### 사진
+<img src="docs/screenshots/photos.png" alt="사진 메뉴 — 여행 기록들의 사진만 정리" width="900">
+
+<br>사진</br>은 작성된 여행에 첨부되어 있는 사진을 한번에 보여줍니다. 국가별로 필터링해서 확인할 수 있습니다. 사진을 클릭하면 해당 여행으로 이동합니다.
+
+### 지출
+<img src="docs/screenshots/expenses.png" alt="지출 메뉴 — 여행 중 발생한 지출 정리" width="900">
+
+<br>지출</br>은 여행 중 발생한 비용을 정리해서 보여줍니다. 카테고리, 여행별, 통화별 등 입력한 지출 정보를 정리해서 나타냅니다.
+
+### 여행 페이지
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/screenshots/page-with-map.png" alt="여행 페이지 — 기본 정보와 이동경로"></td>
+    <td width="50%" valign="top"><img src="docs/screenshots/page-content.png" alt="여행 기록 — 소제목별 기록"></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>① 작성된 기본 정보</b><br>작성된 내용이 테이블 형태로 정리되어 나타냅니다. 내용의 오른쪽은 소제목에 작성한 장소를 이동경로로 구글지도를 통해 보여줍니다.</td>
+    <td valign="top"><b>② 소제목별 기록</b><br>작성한 장소의 기본 정보를 나타내고, 텍스트 편집기로 작성한 본문과 사진을 나타냅니다.</td>
+  </tr>
+</table>
+
+여러 장의 사진을 한 번에 올리면 촬영 시각·위치(EXIF)를 읽어 소제목을 자동으로 나눠 주고(아이폰 HEIC 도 지원), 작성 중인 글은 자동 저장됩니다.
+
 ### 내 공간 — 대시보드
 <img src="docs/screenshots/my-space.jpg" alt="내 공간 대시보드 — 시계, 할 일, 캘린더, 메모, 집중 타이머, 날씨, 계산기 위젯" width="900">
 
